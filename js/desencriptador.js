@@ -10,7 +10,7 @@
 - Debe ser posible convertir una palabra para la versión encriptada también devolver una palabra encriptada para su versión original. 
 */
 
-function encriptador() {
+function desencriptador() {
 
     let inputText = document.querySelector(".input-texto").value;
 
@@ -20,34 +20,40 @@ function encriptador() {
     if(!testMin || testAcc){
         alert("Recuerde, solo minusculas y sin acentos!")
     }else {
+
         let resultado = [];
 
         for (let i = 0; i < inputText.length; i++){
-    
+
             let inputLetter = inputText[i];
-    
+
             if (inputLetter == "a"){
-                resultado.push("ai");
+                resultado.push("a");
+                i += 1;
             } else if(inputLetter == "e"){
-                resultado.push("enter");
+                resultado.push("e");
+                i += 4;
             } else if(inputLetter == "i") {
-                resultado.push("imes");
+                resultado.push("i");
+                i += 3;
             } else if(inputLetter == "o"){
-                resultado.push("ober");
+                resultado.push("o");
+                i += 3;
             } else if(inputLetter == "u"){
-                resultado.push("ufat");
+                resultado.push("u");
+                i += 3;
             } else {
                 resultado.push(inputLetter);
             }
         }
-    
+
         muneco.style.display = "none";
         cartelRectangle.style.display = "none";
         outputText.style.display = "block";
         copyButton.style.display = "block";
-    
+
         return outputText.innerHTML = resultado.join("");
     }
 }
 
-buttonEncriptar.addEventListener('click', encriptador);
+buttonDesencriptar.addEventListener('click', desencriptador);
