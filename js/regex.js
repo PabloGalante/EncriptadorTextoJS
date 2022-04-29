@@ -1,6 +1,6 @@
 /* Regex Validator */
 
-const regexMin = /[^a-z]/;
+const regexMin = /[^a-z ]/;
 const regexAccent = /[\u00C0-\u00FF]/;
 
 function validadorMin(input){
