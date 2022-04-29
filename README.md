@@ -29,4 +29,4 @@ inserción del texto que será encriptado o desencriptado, y el usuario debe pod
 
 DIRECCION WEB DE LA APP
 ========================
-Puedes correr la aplicación yendo al siguiente enlace:
+Puedes correr la aplicación yendo al siguiente enlace: https://pablogalante.github.io/EncriptadorTextoJS/
