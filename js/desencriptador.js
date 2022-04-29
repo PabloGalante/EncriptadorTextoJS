@@ -14,8 +14,8 @@ function desencriptador() {
 
     let inputText = document.querySelector(".input-texto").value;
 
-    const testMin = regexMin.test(inputText);
-    const testAcc = regexAccent.test(inputText);
+    let testMin = regexMin.test(inputText);
+    let testAcc = regexAccent.test(inputText);
 
     if(!testMin || testAcc){
         alert("Recuerde, solo minusculas y sin acentos!")
