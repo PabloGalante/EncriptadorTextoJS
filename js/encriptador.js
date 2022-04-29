@@ -12,13 +12,13 @@
 
 function encriptador() {
 
-    let inputText = document.querySelector(".input-texto").value;
+    let inputText = input.value;
 
-    let testMin = regexMin.test(inputText);
-    let testAcc = regexAccent.test(inputText);
+    const testMin = validadorMin(inputText);
+    const testAcc = validadorAcc(inputText);
 
-    if(!testMin || testAcc){
-        alert("Recuerde, solo minusculas y sin acentos!")
+    if(testMin || testAcc){
+        alert("Recuerde, solo minusculas y sin acentos!");
     }else {
         let resultado = [];
 
@@ -45,7 +45,7 @@ function encriptador() {
         cartelRectangle.style.display = "none";
         outputText.style.display = "block";
         copyButton.style.display = "block";
-    
+
         return outputText.innerHTML = resultado.join("");
     }
 }
